@@ -1,49 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BoxHub</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoxHub - Maintenance</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      border-radius: 24px;
+      padding: 40px 25px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.08);
+    }
+
+    .icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 27px;
+    }
+
+    p {
+      color: #777;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .brand {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
-<div id="app">
-<header><div class="logo"><b>B</b>ox<span>Hub</span></div><div>🌐 ID &nbsp; 🟢 Group</div></header>
-
-<section id="login" class="auth hidden">
-  <div class="auth-card"><h1>Selamat datang</h1><p>Masuk untuk membuka dashboard BoxHub.</p>
-  <input id="username" placeholder="Username"><input id="password" type="password" placeholder="Password">
-  <button onclick="login()">Masuk</button><button class="secondary" onclick="register()">Buat akun</button>
-  <small>Demo: buat akun sendiri untuk mulai.</small></div>
-</section>
-
-<main id="main">
-<section id="home" class="page">
-  <div class="banner"><div><h2>SIARAN LANGSUNG<br>BOXHUB HADIAH POIN</h2><p>Mulai hari ini — setiap hari ada pemenang.</p><button onclick="nav('market')">LIHAT HADIAH</button></div><strong>3.000.000<br><small>POIN</small></strong></div>
-  <div class="quick"><button onclick="toast('Event sedang dibuka')">🏆<span>Event</span></button><button onclick="nav('market')">🎁<span>Free Box</span></button><button onclick="nav('warehouse')">🧰<span>Hadiah</span></button><button onclick="toast('Link undangan disalin')">↗️<span>Undang</span></button></div>
-  <div class="winner"><h2>CONGRATULATIONS !!!</h2><div>👒 <b>Mirza</b> <em>SP</em> 258,000 <small>Pemenang terbaru</small></div></div>
-  <div class="tabs"><button class="active" onclick="loadProducts('Semua',this)">✦ Hot</button><button onclick="loadProducts('Combo',this)">⚡ Combo</button><button onclick="loadProducts('Demon king',this)">♛ Demon king</button><button onclick="loadProducts('Battle',this)">⚔ Battle</button></div>
-  <div id="products" class="grid"></div>
-</section>
-
-<section id="market" class="page hidden"><div class="heading"><h1>Marketplace</h1><p>Pilih box yang ingin kamu beli.</p></div><div id="marketProducts" class="grid"></div></section>
-
-<section id="warehouse" class="page hidden"><div class="heading"><h1>Gudang</h1><p>Hadiah yang kamu beli akan muncul di sini.</p></div><div id="inventory" class="grid"></div></section>
-
-<section id="profile" class="page hidden">
-  <div class="profile"><div class="pfp">👹</div><div><h1 id="pname">G1</h1><p>Mengikuti 0 &nbsp;|&nbsp; Pengikut 2</p><p>🔵 ID 408062</p></div>
-  <div class="level"><b id="lvl">Lv25</b><span>Kurang 1,529 XP ke Lv. UP</span><div class="bar"><i></i></div><small>14,409 XP &nbsp;&nbsp;&nbsp;&nbsp; 15,938 XP</small></div></div>
-  <div class="wallet"><div>💳 Saldo Dompet<strong id="wallet">0</strong></div><div><button onclick="topup()">Klaim</button><button class="lime" onclick="topup()">Top up</button></div></div>
-  <div class="tiles"><div>👥 Undang Teman<strong>Event Gratis Undian</strong></div><div>🪙 Saldo Poin<strong id="points">0</strong></div></div>
-  <div class="features"><h2>Fitur Lainnya</h2><div class="feature-grid">
-    <button onclick="historyPage()">↻<span>Riwayat</span></button><button onclick="nav('warehouse')">🚚<span>Pesanan</span></button><button onclick="toast('Voucher tersedia')">🎟️<span>Voucher</span></button><button onclick="toast('Tidak ada pesan baru')">🔔<span>Pesan</span></button>
-    <button onclick="toast('Fitur tukar poin')">⇄<span>Tukar</span></button><button onclick="toast('Alamat tersimpan')">⌖<span>Alamat</span></button><button onclick="toast('Pusat bantuan')">🎧<span>Bantuan</span></button><button onclick="logout()">⚙<span>Keluar</span></button>
-  </div></div>
-</section>
-</main>
-
-<nav><button onclick="nav('home')" class="active">⚡<span>Hadiah</span></button><button onclick="nav('market')">▰<span>Marketplace</span></button><button onclick="nav('warehouse')">▣<span>Gudang</span></button><button onclick="nav('profile')">●<span>Saya</span></button></nav>
-<div id="toast"></div>
-</div>
-<script src="app.js"></script>
-</body></html>
+  <div class="box">
+    <div class="icon">🔧</div>
+    <h1>BoxHub sedang dalam perbaikan</h1>
+    <p>
+      Website sedang diperbarui untuk memberikan pengalaman
+      yang lebih baik. Silakan kembali lagi nanti.
+    </p>
+    <div class="brand">BOXHUB</div>
+  </div>
+</body>
+</html>
